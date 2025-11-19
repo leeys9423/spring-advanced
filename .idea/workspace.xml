@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3794a515-f22b-4a44-9d0b-ddb6a498276e" name="Changes" comment="템플릿 콜백 패턴 - 적용">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/AdvancedApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/LogTraceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v0/OrderControllerV0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v0/OrderRepositoryV0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v0/OrderServiceV0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v1/OrderControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v1/OrderRepositoryV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v1/OrderServiceV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v2/OrderControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v2/OrderRepositoryV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v2/OrderServiceV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v3/OrderControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v3/OrderRepositoryV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v3/OrderServiceV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v4/OrderControllerV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v4/OrderRepositoryV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v4/OrderServiceV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v5/OrderControllerV5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v5/OrderRepositoryV5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/app/v5/OrderServiceV5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/TraceId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/TraceStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/callback/TraceCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/callback/TraceTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/hellotrace/HelloTraceV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/hellotrace/HelloTraceV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/logtrace/FieldLogTrace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/logtrace/LogTrace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/logtrace/ThreadLocalLogTrace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/advanced/trace/template/AbstractTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/AdvancedApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/hellotrace/HelloTraceV1Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/hellotrace/HelloTraceV2Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/logtrace/FieldLogTraceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/logtrace/ThreadLocalLogTraceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/ContextV1Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/ContextV2Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/TemplateCallbackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/strategy/ContextV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/strategy/ContextV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/strategy/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/strategy/StrategyLogic1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/strategy/StrategyLogic2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/template/Callback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/strategy/code/template/TimeLogTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/template/TemplateMethodTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/template/code/AbstractTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/template/code/SubClassLogic1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/template/code/SubClassLogic2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/threadlocal/FieldServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/threadlocal/ThreadLocalServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/threadlocal/code/FieldService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/advanced/trace/threadlocal/code/ThreadLocalService.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;leeys9423&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1762015729" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1762015728" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/leeys9423/spring-advanced.git&quot;,
+    &quot;accountId&quot;: &quot;4c8ccb80-126a-4b0c-bfdc-d55e9c1e4dc1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="34swazf12SaIqLEfzYwnaqoa8jO" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build advanced.executor": "Run",
+    "Gradle.ContextV1Test.strategyV1.executor": "Run",
+    "Gradle.ContextV1Test.strategyV2.executor": "Run",
+    "Gradle.ContextV1Test.strategyV3.executor": "Run",
+    "Gradle.ContextV1Test.strategyV4.executor": "Run",
+    "Gradle.ContextV2Test.strategyV1.executor": "Run",
+    "Gradle.ContextV2Test.strategyV2.executor": "Run",
+    "Gradle.ContextV2Test.strategyV3.executor": "Run",
+    "Gradle.FieldLogTraceTest.begin_end_level2.executor": "Run",
+    "Gradle.FieldLogTraceTest.begin_exception_level2.executor": "Run",
+    "Gradle.FieldServiceTest.field.executor": "Run",
+    "Gradle.HelloTraceV1Test.begin_end.executor": "Run",
+    "Gradle.HelloTraceV1Test.begin_exception.executor": "Run",
+    "Gradle.HelloTraceV2Test.executor": "Run",
+    "Gradle.TemplateCallbackTest.callbackV1.executor": "Run",
+    "Gradle.TemplateCallbackTest.callbackV2.executor": "Run",
+    "Gradle.TemplateMethodTest.templateMethodV0.executor": "Run",
+    "Gradle.TemplateMethodTest.templateMethodV1.executor": "Run",
+    "Gradle.TemplateMethodTest.templateMethodV2.executor": "Run",
+    "Gradle.ThreadLocalLogTraceTest.begin_end_level2.executor": "Run",
+    "Gradle.ThreadLocalLogTraceTest.begin_exception_level2.executor": "Run",
+    "Gradle.ThreadLocalServiceTest.field.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AdvancedApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/yslee/Desktop/study/advanced/src/main/java/hello/advanced/app/v5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/hello/advanced/app/v5" />
+      <recent name="$PROJECT_DIR$/src/main/java/hello/advanced/app/v4" />
+      <recent name="$PROJECT_DIR$/src/main/java/hello/advanced/app/v3" />
+      <recent name="$PROJECT_DIR$/src/main/java/hello/advanced/app/v1" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="hello.advanced.trace.logtrace" />
+      <recent name="hello.advanced.trace.hellotrace" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hello.advanced.trace.strategy.code.strategy" />
+      <recent name="hello.advanced.trace.template.code" />
+      <recent name="hello.advanced.trace.logtrace" />
+      <recent name="hello.advanced.trace.threadlocal" />
+      <recent name="hello.advanced.trace.threadlocal.code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.TemplateCallbackTest.callbackV2">
+    <configuration name="ContextV2Test.strategyV1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hello.advanced.trace.strategy.ContextV2Test.strategyV1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContextV2Test.strategyV2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hello.advanced.trace.strategy.ContextV2Test.strategyV2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContextV2Test.strategyV3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hello.advanced.trace.strategy.ContextV2Test.strategyV3&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TemplateCallbackTest.callbackV1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hello.advanced.trace.strategy.code.TemplateCallbackTest.callbackV1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TemplateCallbackTest.callbackV2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hello.advanced.trace.strategy.code.TemplateCallbackTest.callbackV2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdvancedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="advanced.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hello.advanced.AdvancedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TemplateCallbackTest.callbackV2" />
+        <item itemvalue="Gradle.TemplateCallbackTest.callbackV1" />
+        <item itemvalue="Gradle.ContextV2Test.strategyV2" />
+        <item itemvalue="Gradle.ContextV2Test.strategyV3" />
+        <item itemvalue="Gradle.ContextV2Test.strategyV1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3794a515-f22b-4a44-9d0b-ddb6a498276e" name="Changes" comment="" />
+      <created>1762015654366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762015654366</updated>
+      <workItem from="1762015655418" duration="136000" />
+      <workItem from="1762441771664" duration="983000" />
+      <workItem from="1762784417670" duration="4518000" />
+      <workItem from="1762951093069" duration="7335000" />
+      <workItem from="1763042311977" duration="3321000" />
+      <workItem from="1763191681134" duration="3671000" />
+      <workItem from="1763297454071" duration="6866000" />
+    </task>
+    <task id="LOCAL-00001" summary="프로젝트 생성">
+      <option name="closed" value="true" />
+      <created>1762015763329</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762015763329</updated>
+    </task>
+    <task id="LOCAL-00002" summary="예제 프로젝트 만들기 - V0">
+      <option name="closed" value="true" />
+      <created>1762442155428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762442155428</updated>
+    </task>
+    <task id="LOCAL-00003" summary="로그 추적기 V1 - 프로토타입 개발">
+      <option name="closed" value="true" />
+      <created>1762785998848</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762785998848</updated>
+    </task>
+    <task id="LOCAL-00004" summary="로그 추적기 V1 - 적용">
+      <option name="closed" value="true" />
+      <created>1762787696634</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762787696634</updated>
+    </task>
+    <task id="LOCAL-00005" summary="로그 추적기 V2 - 파라미터로 동기화 개발">
+      <option name="closed" value="true" />
+      <created>1762787969682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762787969682</updated>
+    </task>
+    <task id="LOCAL-00006" summary="로그 추적기 V2 - 적용">
+      <option name="closed" value="true" />
+      <created>1762788350391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762788350391</updated>
+    </task>
+    <task id="LOCAL-00007" summary="필드 동기화 - 개발">
+      <option name="closed" value="true" />
+      <created>1762952970205</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762952970205</updated>
+    </task>
+    <task id="LOCAL-00008" summary="필드 동기화 - 적용">
+      <option name="closed" value="true" />
+      <created>1762953655283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762953655283</updated>
+    </task>
+    <task id="LOCAL-00009" summary="동시성 문제 - 예제 코드">
+      <option name="closed" value="true" />
+      <created>1762955103455</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762955103455</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ThreadLocal - 예제 코드">
+      <option name="closed" value="true" />
+      <created>1762956965074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762956965074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="쓰레드 로컬 동기화 - 개발">
+      <option name="closed" value="true" />
+      <created>1762957339951</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762957339951</updated>
+    </task>
+    <task id="LOCAL-00012" summary="쓰레드 로컬 동기화 - 적용">
+      <option name="closed" value="true" />
+      <created>1762957483616</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762957483616</updated>
+    </task>
+    <task id="LOCAL-00013" summary="템플릿 메서드 패턴 - 예제1">
+      <option name="closed" value="true" />
+      <created>1763042754597</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1763042754597</updated>
+    </task>
+    <task id="LOCAL-00014" summary="템플릿 메서드 패턴 - 예제2">
+      <option name="closed" value="true" />
+      <created>1763043285061</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1763043285061</updated>
+    </task>
+    <task id="LOCAL-00015" summary="템플릿 메서드 패턴 - 예제3">
+      <option name="closed" value="true" />
+      <created>1763125606410</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1763125606410</updated>
+    </task>
+    <task id="LOCAL-00016" summary="템플릿 메서드 패턴 - 적용1">
+      <option name="closed" value="true" />
+      <created>1763193700380</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1763193700380</updated>
+    </task>
+    <task id="LOCAL-00017" summary="전략 패턴 - 예제1">
+      <option name="closed" value="true" />
+      <created>1763196085532</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1763196085532</updated>
+    </task>
+    <task id="LOCAL-00018" summary="전략 패턴 - 예제2">
+      <option name="closed" value="true" />
+      <created>1763298149105</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1763298149105</updated>
+    </task>
+    <task id="LOCAL-00019" summary="전략 패턴 - 예제3">
+      <option name="closed" value="true" />
+      <created>1763386664929</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763386664929</updated>
+    </task>
+    <task id="LOCAL-00020" summary="템플릿 콜백 패턴 - 예제">
+      <option name="closed" value="true" />
+      <created>1763473201627</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1763473201627</updated>
+    </task>
+    <task id="LOCAL-00021" summary="템플릿 콜백 패턴 - 적용">
+      <option name="closed" value="true" />
+      <created>1763474880056</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763474880056</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="프로젝트 생성" />
+    <MESSAGE value="예제 프로젝트 만들기 - V0" />
+    <MESSAGE value="로그 추적기 V1 - 프로토타입 개발" />
+    <MESSAGE value="로그 추적기 V1 - 적용" />
+    <MESSAGE value="로그 추적기 V2 - 파라미터로 동기화 개발" />
+    <MESSAGE value="로그 추적기 V2 - 적용" />
+    <MESSAGE value="필드 동기화 - 개발" />
+    <MESSAGE value="필드 동기화 - 적용" />
+    <MESSAGE value="동시성 문제 - 예제 코드" />
+    <MESSAGE value="ThreadLocal - 예제 코드" />
+    <MESSAGE value="쓰레드 로컬 동기화 - 개발" />
+    <MESSAGE value="쓰레드 로컬 동기화 - 적용" />
+    <MESSAGE value="템플릿 메서드 패턴 - 예제1" />
+    <MESSAGE value="템플릿 메서드 패턴 - 예제2" />
+    <MESSAGE value="템플릿 메서드 패턴 - 예제3" />
+    <MESSAGE value="템플릿 메서드 패턴 - 적용1" />
+    <MESSAGE value="전략 패턴 - 예제1" />
+    <MESSAGE value="전략 패턴 - 예제2" />
+    <MESSAGE value="전략 패턴 - 예제3" />
+    <MESSAGE value="템플릿 콜백 패턴 - 예제" />
+    <MESSAGE value="템플릿 콜백 패턴 - 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="템플릿 콜백 패턴 - 적용" />
+  </component>
+</project>
